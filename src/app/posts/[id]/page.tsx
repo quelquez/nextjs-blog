@@ -1,5 +1,6 @@
-import prisma from "@/lib/db";
+import { PrismaClient } from '@prisma/client'
 import { notFound } from "next/navigation";
+const prisma = new PrismaClient()
 
 export default async function Page({params}:{params: {id:string}
 }) {
